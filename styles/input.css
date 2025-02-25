@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+:root {
+    --azul-espaco-100: #05111E; 
+}
+
+@theme {
+    --color-laranja-marte: #ED5A0F;
+    --color-azul-espaco-100: #05111E;
+    --color-azul-espaco-200: #1E1F2C;
+}
