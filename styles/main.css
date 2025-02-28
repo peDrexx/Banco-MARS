@@ -1,4 +1,5 @@
 /*! tailwindcss v4.0.8 | MIT License | https://tailwindcss.com */
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -8,7 +9,6 @@
       "Courier New", monospace;
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
-    --font-weight-bold: 700;
     --default-font-family: var(--font-sans);
     --default-font-feature-settings: var(--font-sans--font-feature-settings);
     --default-font-variation-settings: var(
@@ -21,6 +21,7 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
+    --font-days: "Days One", sans-serif;
     --color-laranja-marte: #ED5A0F;
     --color-azul-espaco-100: #05111E;
   }
@@ -170,22 +171,14 @@
   .bg-azul-espaco-100 {
     background-color: var(--color-azul-espaco-100);
   }
+  .font-days {
+    font-family: var(--font-days);
+  }
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
-  }
   .text-laranja-marte {
     color: var(--color-laranja-marte);
   }
-}
-:root {
-  --azul-espaco-100: #05111E;
-}
-@property --tw-font-weight {
-  syntax: "*";
-  inherits: false;
 }

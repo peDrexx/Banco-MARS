@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
 @import "tailwindcss";
 
-:root {
-    --azul-espaco-100: #05111E; 
-}
-
 @theme {
+    /* Fontes */
+    --font-days: "Days One", sans-serif;
+
+    /* Cores */
     --color-laranja-marte: #ED5A0F;
     --color-azul-espaco-100: #05111E;
     --color-azul-espaco-200: #1E1F2C;
