@@ -7,6 +7,46 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body class="bg-azul-espaco-100">
-    <h1 class="text-laranja-marte text-3xl font-days text-red">Ola mundo!!</h1>
+    <header class="absolute w-full">
+        <div class="flex items-center justify-between p-4">
+            <!-- Seção Logo -->
+            <div class="logo">
+                <img src="./images/logo_MARS.png">
+            </div>
+
+            <!-- Seção Menu de Navegação -->
+            <nav class="space-x-6 font-days">
+                <a href="#" class="text-white hover:text-laranja-marte">Início</a>
+                <a href="#" class="text-white hover:text-laranja-marte">Sobre</a>
+                <a href="#" class="text-white hover:text-laranja-marte">Serviços</a>
+                <a href="#" class="text-white hover:text-laranja-marte">Contato</a>
+            </nav>
+
+            <!-- Seção Botão Abrir Conta -->
+            <div class="botao-conta font-days">
+                <button class="bg-laranja-marte text-white px-6 py-2 rounded-full hover:bg-opacity-90">
+                    Abrir Conta
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <div class="w-full h-[100vh] bg-[url('../images/hero_bg.png')] bg-no-repeat bg-center bg-cover p-[2%] flex flex-col gap-y-50 items-center justify-center">
+        <div class="flex flex-col items-center justify-center text-white text-center mx-auto">
+            <h1 class="w-4/5 text-5xl font-days mb-6">SOMOS A FORMA MAIS EFICIENTE <br> DE CUIDAR DO SEU DINHEIRO.</h1>
+            <p class="text-xl w-[60%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed augue vel purus placerat finibus. Donec sit amet orci facilisis, euismod dolor at, viverra ligula. Maecenas in malesuada orci, et euismod leo.</p>
+        </div>
+
+        <div class="w-full flex flex-row items-center justify-center gap-[5%]">
+            <div class="flex items-center border-r-2 p-[1.5%] h-[200%] border-white">
+                <button class="rounded-full bg-laranja-marte text-white font-days p-5 cursor-pointer">VEJA MAIS DETALHES</button>
+            </div>
+            <div class="flex flex-col gap-5 ">
+                <h2 class="font-days text-white">+750.000 ASSINANTES</h2>
+                <h2 class="font-days text-white">150% DO CDI</h2>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
