@@ -1,52 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MARS</title>
-    <link rel="stylesheet" href="styles/main.css">
-</head>
-<body class="bg-azul-espaco-100">
-    <header class="absolute w-full">
-        <div class="flex items-center justify-between p-4">
-            <!-- Seção Logo -->
-            <div class="logo">
-                <img src="./images/logo_MARS.png">
-            </div>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MARS</title>
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body class="bg-azul-espaco-100">
+        <!-- Before the fold -->
+        <div class="w-full flex flex-col gap-[240px] max-[867px]:gap-[180px] bg-[url(../images/hero_bg.png)] bg-top bg-no-repeat bg-auto xl:bg-cover min-h-screen bg-fixed">
+            <!-- Header -->
+            <header class="w-full flex flex-row justify-between items-center py-2 px-7">
+                <div>
+                    <img src="./images/logo_MARS.png" alt="logo do banco mars"> 
+                </div>
+                <nav class="flex-row font-days text-white hidden min-[867px]:flex">
+                    <ul class="flex gap-x-16">
+                        <a href="#" class="hover:text-laranja-marte transition-all">Inicio</a>
+                        <a href="#" class="hover:text-laranja-marte transition-all">Sobre nós</a>
+                        <a href="#" class="hover:text-laranja-marte transition-all">Serviços</a>
+                        <a href="#" class="hover:text-laranja-marte transition-all">FAQ</a>
+                    </ul>
+                </nav>
+                <div class="hidden min-[867px]:block">
+                    <a href="#">
+                        <button class="bg-laranja-marte font-days text-white py-2 px-4 rounded-full cursor-pointer">Abra sua conta</button>
+                    </a>
+                </div>
+                <!-- Menu hamburger -->
+                <div class="block min-[867px]:hidden w-[100px] h-[100px] bg-laranja-marte rounded-full">
+                    <h3 class="text-white font-days text-center">Menu</h3>
+                </div>
+            </header>
 
-            <!-- Seção Menu de Navegação -->
-            <nav class="space-x-6 font-days">
-                <a href="#" class="text-white hover:text-laranja-marte">Início</a>
-                <a href="#" class="text-white hover:text-laranja-marte">Sobre</a>
-                <a href="#" class="text-white hover:text-laranja-marte">Serviços</a>
-                <a href="#" class="text-white hover:text-laranja-marte">Contato</a>
-            </nav>
-
-            <!-- Seção Botão Abrir Conta -->
-            <div class="botao-conta font-days">
-                <button class="bg-laranja-marte text-white px-6 py-2 rounded-full hover:bg-opacity-90">
-                    Abrir Conta
-                </button>
-            </div>
+            <!-- Hero -->
+            <section class="flex flex-col w-full items-center gap-[78px] min-[867px]:gap-[138px]">
+                <div class="w-full max-[867px]:w-[75%] text-center flex flex-col items-center gap-[38px]">
+                    <h1 class="text-5xl text-bege-alaranjado min-[867px]:w-[50%]">Somos a forma mais eficiente <br> de cuidar do seu dinheiro.</h1>
+                    <p class="text-sm text-bege-alaranjado min-[867px]:w-[50%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed augue vel purus placerat finibus. Donec sit amet orci facilisis, euismod dolor at, viverra ligula. Maecenas in malesuada orci, et euismod leo.</p>
+                </div>
+                <div class="flex flex-row max-[867px]:flex-col-reverse gap-[78px] min-[867px]:gap-[118px]">
+                    <button class="text-bege-alaranjado bg-laranja-marte font-days rounded-full py-3 px-5 cursor-pointer">Veja mais detalhes</button>
+                    <div class="text-bege-alaranjado">
+                        <h1>+750.000 ASSINANTES</h1>
+                        <h1>150%  DO CDI</h1>
+                    </div>
+                </div>
+            </section>
         </div>
-    </header>
 
-    <!-- Hero -->
-    <div class="w-full h-[100vh] bg-[url('../images/hero_bg.png')] bg-no-repeat bg-center bg-cover p-[2%] flex flex-col gap-y-50 items-center justify-center">
-        <div class="flex flex-col items-center justify-center text-white text-center mx-auto">
-            <h1 class="w-4/5 text-5xl font-days mb-6">SOMOS A FORMA MAIS EFICIENTE <br> DE CUIDAR DO SEU DINHEIRO.</h1>
-            <p class="text-xl w-[60%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed augue vel purus placerat finibus. Donec sit amet orci facilisis, euismod dolor at, viverra ligula. Maecenas in malesuada orci, et euismod leo.</p>
-        </div>
+        <!-- Conteúdo -->
+        <main>
 
-        <div class="w-full flex flex-row items-center justify-center gap-[5%]">
-            <div class="flex items-center border-r-2 p-[1.5%] h-[200%] border-white">
-                <button class="rounded-full bg-laranja-marte text-white font-days p-5 cursor-pointer">VEJA MAIS DETALHES</button>
-            </div>
-            <div class="flex flex-col gap-5 ">
-                <h2 class="font-days text-white">+750.000 ASSINANTES</h2>
-                <h2 class="font-days text-white">150% DO CDI</h2>
-            </div>
-        </div>
-    </div>
-</body>
+        </main>
+
+    </body>
 </html>
