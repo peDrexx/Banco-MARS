@@ -1,5 +1,6 @@
 /*! tailwindcss v4.0.8 | MIT License | https://tailwindcss.com */
 @import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -28,6 +29,7 @@
       --font-mono--font-variation-settings
     );
     --font-days: "Days One", sans-serif;
+    --font-grotesque: "Bricolage Grotesque", sans-serif;
     --color-laranja-marte: #ED5A0F;
     --color-bege-alaranjado: #EDDBD1;
     --color-azul-espaco-100: #05111E;
@@ -184,6 +186,12 @@
   .relative {
     position: relative;
   }
+  .mb-\[32px\] {
+    margin-bottom: 32px;
+  }
+  .mb-\[62px\] {
+    margin-bottom: 62px;
+  }
   .block {
     display: block;
   }
@@ -208,20 +216,20 @@
   .min-h-screen {
     min-height: 100vh;
   }
-  .w-\[7\%\] {
-    width: 7%;
-  }
-  .w-\[50\%\] {
-    width: 50%;
-  }
-  .w-\[75\%\] {
-    width: 75%;
-  }
   .w-\[100px\] {
     width: 100px;
   }
   .w-full {
     width: 100%;
+  }
+  .basis-1 {
+    flex-basis: calc(var(--spacing) * 1);
+  }
+  .basis-1\/2 {
+    flex-basis: calc(1/2 * 100%);
+  }
+  .basis-1\/3 {
+    flex-basis: calc(1/3 * 100%);
   }
   .border-collapse {
     border-collapse: collapse;
@@ -241,35 +249,20 @@
   .items-center {
     align-items: center;
   }
+  .justify-around {
+    justify-content: space-around;
+  }
   .justify-between {
     justify-content: space-between;
   }
   .justify-center {
     justify-content: center;
   }
-  .gap-\[8px\] {
-    gap: 8px;
-  }
-  .gap-\[38\] {
-    gap: 38;
-  }
   .gap-\[38px\] {
     gap: 38px;
   }
   .gap-\[78px\] {
     gap: 78px;
-  }
-  .gap-\[80px\] {
-    gap: 80px;
-  }
-  .gap-\[86px\] {
-    gap: 86px;
-  }
-  .gap-\[118px\] {
-    gap: 118px;
-  }
-  .gap-\[138px\] {
-    gap: 138px;
   }
   .gap-\[240px\] {
     gap: 240px;
@@ -290,14 +283,23 @@
   .bg-laranja-marte {
     background-color: var(--color-laranja-marte);
   }
+  .bg-\[url\(\.\.\/images\/flare_sobre\.png\)\] {
+    background-image: url(../images/flare_sobre.png);
+  }
   .bg-\[url\(\.\.\/images\/hero_bg\.png\)\] {
     background-image: url(../images/hero_bg.png);
   }
   .bg-auto {
     background-size: auto;
   }
+  .bg-cover {
+    background-size: cover;
+  }
   .bg-fixed {
     background-attachment: fixed;
+  }
+  .bg-center {
+    background-position: center;
   }
   .bg-top {
     background-position: top;
@@ -314,11 +316,17 @@
   .px-7 {
     padding-inline: calc(var(--spacing) * 7);
   }
+  .px-\[72px\] {
+    padding-inline: 72px;
+  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
+  }
+  .py-\[96px\] {
+    padding-block: 96px;
   }
   .text-center {
     text-align: center;
@@ -336,6 +344,9 @@
   }
   .text-bege-alaranjado {
     color: var(--color-bege-alaranjado);
+  }
+  .text-laranja-marte {
+    color: var(--color-laranja-marte);
   }
   .text-white {
     color: var(--color-white);
@@ -359,34 +370,9 @@
       }
     }
   }
-  .max-\[867px\]\:flex {
-    @media (width < 867px) {
-      display: flex;
-    }
-  }
-  .max-\[867px\]\:w-\[7\] {
-    @media (width < 867px) {
-      width: 7;
-    }
-  }
-  .max-\[867px\]\:w-\[50\%\] {
-    @media (width < 867px) {
-      width: 50%;
-    }
-  }
   .max-\[867px\]\:w-\[75\%\] {
     @media (width < 867px) {
       width: 75%;
-    }
-  }
-  .max-\[867px\]\:w-\[300px\] {
-    @media (width < 867px) {
-      width: 300px;
-    }
-  }
-  .max-\[867px\]\:flex-col {
-    @media (width < 867px) {
-      flex-direction: column;
     }
   }
   .max-\[867px\]\:flex-col-reverse {
@@ -397,16 +383,6 @@
   .max-\[867px\]\:gap-\[180px\] {
     @media (width < 867px) {
       gap: 180px;
-    }
-  }
-  .max-\[867px\]\:gap-\[230px\] {
-    @media (width < 867px) {
-      gap: 230px;
-    }
-  }
-  .min-\[867\]\:w-\[50\%\] {
-    @media (width >= 867) {
-      width: 50%;
     }
   }
   .min-\[867px\]\:block {
@@ -424,19 +400,9 @@
       display: none;
     }
   }
-  .min-\[867px\]\:w-2\/4 {
-    @media (width >= 867px) {
-      width: calc(2/4 * 100%);
-    }
-  }
   .min-\[867px\]\:w-\[50\%\] {
     @media (width >= 867px) {
       width: 50%;
-    }
-  }
-  .min-\[867px\]\:w-\[300px\] {
-    @media (width >= 867px) {
-      width: 300px;
     }
   }
   .min-\[867px\]\:gap-\[118px\] {
@@ -455,8 +421,13 @@
     }
   }
 }
+p {
+  font-family: var(--font-grotesque);
+  color: var(--color-bege-alaranjado);
+}
 h1 {
-  font-family: "Days One", sans-serif;
+  font-family: var(--font-days);
+  color: var(--color-bege-alaranjado);
 }
 @property --tw-border-style {
   syntax: "*";

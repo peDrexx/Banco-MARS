@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
 @import "tailwindcss";
 
 @theme {
     /* Fontes */
     --font-days: "Days One", sans-serif;
+    --font-grotesque: "Bricolage Grotesque", sans-serif;
 
     /* Cores */
     --color-laranja-marte: #ED5A0F;
@@ -12,6 +14,12 @@
     --color-azul-espaco-200: #1E1F2C;
 }
 
+p {
+    font-family: var(--font-grotesque);
+    color: var(--color-bege-alaranjado);
+}
+
 h1 {
-    font-family: "Days One", sans-serif;
+    font-family: var(--font-days);
+    color: var(--color-bege-alaranjado);
 }
