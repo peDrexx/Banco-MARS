@@ -229,6 +229,9 @@
   .w-\[100px\] {
     width: 100px;
   }
+  .w-\[338px\] {
+    width: 338px;
+  }
   .w-full {
     width: 100%;
   }
@@ -293,20 +296,11 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .bg-\[\#000612\] {
-    background-color: #000612;
-  }
-  .bg-\[url\] {
-    background-color: url;
-  }
   .bg-azul-espaco-100 {
     background-color: var(--color-azul-espaco-100);
   }
   .bg-laranja-marte {
     background-color: var(--color-laranja-marte);
-  }
-  .bg-\[url\(\.\.\/images\)\] {
-    background-image: url(../images);
   }
   .bg-\[url\(\.\.\/images\/flare_sobre\.png\)\] {
     background-image: url(../images/flare_sobre.png);
@@ -353,6 +347,9 @@
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
+  .py-\[16px\] {
+    padding-block: 16px;
+  }
   .py-\[96px\] {
     padding-block: 96px;
   }
@@ -376,6 +373,9 @@
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
   }
+  .text-\[24px\] {
+    font-size: 24px;
+  }
   .text-\[32px\] {
     font-size: 32px;
   }
@@ -385,8 +385,8 @@
   .text-\[128px\] {
     font-size: 128px;
   }
-  .text-\[px\] {
-    color: px;
+  .text-\[2\] {
+    color: 2;
   }
   .text-bege-alaranjado {
     color: var(--color-bege-alaranjado);
@@ -464,16 +464,6 @@
   .min-mob\:gap-\[138px\] {
     @media (width >= 867px) {
       gap: 138px;
-    }
-  }
-  .min-mob\:bg-azul-espaco-100 {
-    @media (width >= 867px) {
-      background-color: var(--color-azul-espaco-100);
-    }
-  }
-  .min-mob\:bg-\[url\(\.\.\/images\/flare_sobre\.png\)\] {
-    @media (width >= 867px) {
-      background-image: url(../images/flare_sobre.png);
     }
   }
   .min-mob\:text-5xl {
