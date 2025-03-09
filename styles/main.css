@@ -12,8 +12,6 @@
     --spacing: 0.25rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
-    --text-4xl: 2.25rem;
-    --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
     --default-transition-duration: 150ms;
@@ -35,6 +33,7 @@
     --color-laranja-marte: #ED5A0F;
     --color-bege-alaranjado: #EDDBD1;
     --color-azul-espaco-100: #05111E;
+    --color-azul-espaco-200: #1E1F2C;
   }
 }
 @layer base {
@@ -182,6 +181,9 @@
   .collapse {
     visibility: collapse;
   }
+  .absolute {
+    position: absolute;
+  }
   .fixed {
     position: fixed;
   }
@@ -194,11 +196,17 @@
   .mb-\[62px\] {
     margin-bottom: 62px;
   }
+  .mb-\[210px\] {
+    margin-bottom: 210px;
+  }
   .block {
     display: block;
   }
   .flex {
     display: flex;
+  }
+  .grid {
+    display: grid;
   }
   .hidden {
     display: none;
@@ -233,6 +241,12 @@
   .resize {
     resize: both;
   }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
   .flex-col {
     flex-direction: column;
   }
@@ -251,11 +265,20 @@
   .justify-center {
     justify-content: center;
   }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
+  }
+  .gap-\[24px\] {
+    gap: 24px;
+  }
   .gap-\[38px\] {
     gap: 38px;
   }
   .gap-\[78px\] {
     gap: 78px;
+  }
+  .gap-\[210px\] {
+    gap: 210px;
   }
   .gap-\[240px\] {
     gap: 240px;
@@ -273,14 +296,17 @@
   .bg-\[\#000612\] {
     background-color: #000612;
   }
-  .bg-\[\#\] {
-    background-color: #;
+  .bg-\[url\] {
+    background-color: url;
   }
   .bg-azul-espaco-100 {
     background-color: var(--color-azul-espaco-100);
   }
   .bg-laranja-marte {
     background-color: var(--color-laranja-marte);
+  }
+  .bg-\[url\(\.\.\/images\)\] {
+    background-image: url(../images);
   }
   .bg-\[url\(\.\.\/images\/flare_sobre\.png\)\] {
     background-image: url(../images/flare_sobre.png);
@@ -296,6 +322,9 @@
   }
   .bg-fixed {
     background-attachment: fixed;
+  }
+  .bg-bottom {
+    background-position: bottom;
   }
   .bg-center {
     background-position: center;
@@ -327,15 +356,17 @@
   .py-\[96px\] {
     padding-block: 96px;
   }
+  .pb-\[53px\] {
+    padding-bottom: 53px;
+  }
   .text-center {
     text-align: center;
   }
+  .text-right {
+    text-align: right;
+  }
   .font-days {
     font-family: var(--font-days);
-  }
-  .text-4xl {
-    font-size: var(--text-4xl);
-    line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
   .text-5xl {
     font-size: var(--text-5xl);
@@ -347,6 +378,15 @@
   }
   .text-\[32px\] {
     font-size: 32px;
+  }
+  .text-\[48px\] {
+    font-size: 48px;
+  }
+  .text-\[128px\] {
+    font-size: 128px;
+  }
+  .text-\[px\] {
+    color: px;
   }
   .text-bege-alaranjado {
     color: var(--color-bege-alaranjado);
@@ -426,6 +466,11 @@
       gap: 138px;
     }
   }
+  .min-mob\:bg-azul-espaco-100 {
+    @media (width >= 867px) {
+      background-color: var(--color-azul-espaco-100);
+    }
+  }
   .min-mob\:bg-\[url\(\.\.\/images\/flare_sobre\.png\)\] {
     @media (width >= 867px) {
       background-image: url(../images/flare_sobre.png);
@@ -455,6 +500,27 @@ p {
 h1 {
   font-family: var(--font-days);
   color: var(--color-bege-alaranjado);
+}
+.card-servicos {
+  padding: 72px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 58px;
+  background-color: var(--color-azul-espaco-200);
+  position: relative;
+  border-radius: 16px;
+}
+.card-servicos::before {
+  content: '';
+  background: linear-gradient( 45deg, var(--color-azul-espaco-200), var(--color-laranja-marte) );
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  margin: -2px;
+  border-radius: 16px;
 }
 @property --tw-border-style {
   syntax: "*";

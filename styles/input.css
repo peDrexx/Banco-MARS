@@ -25,3 +25,36 @@ h1 {
     font-family: var(--font-days);
     color: var(--color-bege-alaranjado);
 }
+
+.card-servicos {
+    padding: 72px 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 58px;
+    background-color: var(--color-azul-espaco-200);
+    position: relative;
+    border-radius: 16px;
+    /* background: linear-gradient(var(--color-azul-espaco-200), var(--color-azul-espaco-200))
+        padding-box,
+     linear-gradient(45deg, var(--color-azul-espaco-200), var(--color-laranja-marte))
+        border-box;
+    border-radius: 16px;
+    border: 4px solid transparent; */
+}
+
+.card-servicos::before {
+    content: '';
+    background: linear-gradient(
+        45deg,
+        var(--color-azul-espaco-200),
+        var(--color-laranja-marte)
+    );
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    margin: -2px;
+    border-radius: 16px;
+}
